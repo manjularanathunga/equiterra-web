@@ -1,99 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EquiTerra</title>
-  <link rel="stylesheet" href="style.css">
- </head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EquiTerra</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
 <body>
+
 <nav>
-  <div class="logo">
-    <img src="images/equtier.jpg" alt="EquiTerra Logo" />
-  </div>
-  <div class="nav-links">
-    <a href="#hero" class="nav-link">Home</a>
-    <a href="#summary" class="nav-link">Summary</a>
-    <a href="#objectives" class="nav-link">Objectives</a>
-    <a href="#programs" class="nav-link">Programs</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </div>
+    <div class="nav-left">
+        <div class="logo">
+            <img src="images/equtier.jpg" alt="EquiTerra Logo"/>
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <div class="nav-links">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#summary" class="nav-link">Summary</a>
+            <a href="#objectives" class="nav-link">Objectives</a>
+            <a href="#programs" class="nav-link">Programs</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <button id="darkToggle" class="dark-toggle">🌙</button>
+    </div>
 </nav>
 
-  <section id="hero">
-    <h1>EquiTerra – Sustainability, Equity & Innovation</h1>
-  </section>
 
-  <section id="summary">
-    <h2>Executive Summary</h2>
-    <div class="grid">
-      <div class="card">EquiTerra is an independent non-profit think tank based in Huddinge, Sweden, promoting sustainability, equity, and innovation.</div>
-      <div class="card">Founded on Oct 19, 2024, aligned with UN 2030 Agenda, and committed to Net Zero by 2050.</div>
-      <div class="card">Supports communities, businesses, and governments with sustainability tools and frameworks.</div>
-    </div>
-  </section>
+<!-- CONTAINER WRAPS ALL CONTENT -->
+<div class="container">
 
-  <section id="objectives">
-    <h2>Organizational Objectives</h2>
-    <div class="grid">
-      <div class="card">Advance multidisciplinary sustainability research.</div>
-      <div class="card">Promote sustainability literacy and training.</div>
-      <div class="card">Design and implement ESGR tools.</div>
-      <div class="card">Advocate for sustainable, inclusive policies.</div>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section id="hero" class="animated-bg">
+        <h1>EquiTerra – Sustainability, Equity & Innovation</h1>
+    </section>
 
-  <section id="programs">
-    <h2>Programs & Services</h2>
-    <div class="grid">
-      <div class="card">Research & Thought Leadership</div>
-      <div class="card">Education & Capacity Building</div>
-      <div class="card">Technology & Innovation</div>
-      <div class="card">Advocacy & Public Engagement</div>
-      <div class="card">Pilot Programs (SME ESGR Training)</div>
-    </div>
-  </section>
+    <div class="divider"></div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="grid">
-      <div class="card">Address: Klockarvägen 5, 14161, Huddinge, Sweden</div>
-      <div class="card">Email: chamalimadanayake@gmail.com</div>
-      <div class="card">Phone: +46 76 596 2314</div>
-    </div>
-  </section>
+    <!-- SUMMARY -->
+    <section id="summary">
+        <h2>Executive Summary</h2>
+        <div class="grid">
+            <div class="card">
+                <ul>
+                    <li>Independent non-profit sustainability think tank based in Huddinge, Sweden.</li>
+                    <li>Established October 2024, aligned with UN SDGs.</li>
+                    <li>Committed to Net Zero by 2050.</li>
+                    <li>Supports communities, businesses, and governments.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <footer>
+    <div class="divider"></div>
+
+    <!-- OBJECTIVES -->
+    <section id="objectives">
+        <h2>Organizational Objectives</h2>
+        <div class="grid">
+            <div class="card flip-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <ul>
+                            <li>Advance multidisciplinary sustainability research.</li>
+                            <li>Promote sustainability literacy and training.</li>
+                            <li>Develop ESGR tools and frameworks.</li>
+                            <li>Advocate for inclusive, green policy reforms.</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <p>EquiTerra works across climate, policy, research, education, and innovation to build an equitable sustainable world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PROGRAMS -->
+    <section id="programs">
+        <h2>Programs & Services</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">🌱</div>
+                <ul>
+                    <li>Research & Thought Leadership</li>
+                    <li>Education & Capacity Building</li>
+                    <li>Technology & Innovation</li>
+                    <li>Advocacy & Community Engagement</li>
+                    <li>SME ESGR Pilot Programs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="grid">
+            <div class="card">📍 Address: Klockarvägen 5, 14161, Huddinge, Sweden</div>
+            <div class="card">✉️ Email: chamalimadanayake@gmail.com</div>
+            <div class="card">📞 Phone: +46 76 596 2314</div>
+        </div>
+    </section>
+
+</div> <!-- container end -->
+
+<footer>
     <p>© 2025 EquiTerra | Non-Profit Sustainability Think Tank</p>
     <div class="socials">
-      <a href="#">🌍</a>
-      <a href="#">📘</a>
-      <a href="#">🐦</a>
+        <a href="#">🌍</a>
+        <a href="#">📘</a>
+        <a href="#">🐦</a>
     </div>
-  </footer>
+</footer>
 
-  <script>
-    const cards = document.querySelectorAll('.card');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    cards.forEach(card => observer.observe(card));
-
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const top = section.offsetTop - 200;
-        if (pageYOffset >= top) current = section.getAttribute('id');
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) link.classList.add('active');
-      });
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
