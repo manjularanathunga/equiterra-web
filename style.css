@@ -1,49 +1,64 @@
-/* GENERAL */
+/* ===============================
+   GLOBAL STYLES
+================================ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f4f4f4;
+    color: #222;
     scroll-behavior: smooth;
     transition: background 0.3s, color 0.3s;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
-.container {
-    width: min(90%, 1400px);
-    margin-inline: auto;
-}
-
-/* Make all images responsive */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* DARK MODE */
+.container {
+    width: min(90%, 1300px);
+    margin-inline: auto;
+}
+
+/* ===============================
+   DARK MODE
+================================ */
 body.dark {
     background: #0e0e0e;
     color: #e7e7e7;
 }
 
-body.dark .card {
-    background: #1a1a1a;
-    color: white;
-}
-
-body.dark nav {
-    background: #071f18;
-}
-
+body.dark nav,
 body.dark footer {
     background: #071f18;
 }
 
-/* NAVBAR */
+body.dark .card {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.dark-toggle {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    background: #14a37f;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     background: #0a4d3c;
-    padding: 12px 20px;
+    padding: 15px 25px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -52,31 +67,33 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 12px;
+    padding: 10px 15px;
     font-weight: 600;
+    border-radius: 6px;
 }
 
 nav a.active {
     background: #14a37f;
-    border-radius: 6px;
 }
 
-/* HERO */
+/* ===============================
+   HERO SECTION
+================================ */
 #hero {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-/* BACKGROUND ANIMATION */
+/* Animated background */
 .animated-bg {
     background: linear-gradient(135deg, #0a4d3c, #14a37f, #0a4d3c);
     background-size: 300% 300%;
@@ -89,47 +106,98 @@ nav a.active {
     100% { background-position: 0% 50%; }
 }
 
-/* SECTION SPACING */
+/* ===============================
+   SECTION DEFAULT DESIGN
+================================ */
 section {
-    padding: 80px 0;
+    padding: 90px 0;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    color: #0a4d3c;
+    letter-spacing: 1px;
+}
+
+body.dark section h2 {
+    color: #14a37f;
 }
 
 .divider {
-    width: 100%;
+    width: 80%;
     height: 2px;
-    background: linear-gradient(to right, transparent, #14a37f, transparent);
-    margin: 40px 0;
+    background: #14a37f;
+    opacity: 0.4;
+    margin: 60px auto;
+    border-radius: 3px;
 }
 
-/* GRID */
+/* ===============================
+   GRID LAYOUT
+================================ */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    align-items: stretch;
 }
 
-/* CARDS */
+/* ===============================
+   CARD DESIGN
+================================ */
 .card {
     background: white;
-    padding: 24px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
     opacity: 0;
     transform: translateY(20px);
-    transition: all .7s ease;
+    transition: all 0.7s ease;
+    text-align: left;
 }
 
+/* Visible on scroll */
 .card.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Hover effect */
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-8px) scale(1.02);
     box-shadow: 0 14px 28px rgba(0,0,0,0.18);
 }
 
-/* FOOTER */
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.6s;
+}
+
+.card.visible .icon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* List spacing */
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* ===============================
+   FOOTER
+================================ */
 footer {
     background: #0a4d3c;
     color: white;
@@ -143,21 +211,30 @@ footer {
     color: white;
 }
 
-/* --------------------------------------------------------
-   📱 MOBILE RESPONSIVENESS — ADD THIS PART
----------------------------------------------------------*/
+/* ===============================
+   MOBILE RESPONSIVENESS
+================================ */
+
+/* Tablet */
 @media (max-width: 900px) {
     nav .nav-links {
-        gap: 12px;
+        gap: 15px;
     }
 
     nav a {
         padding: 8px 10px;
         font-size: 0.9rem;
     }
+
+    #hero {
+        height: auto;
+        padding: 60px 20px;
+    }
 }
 
+/* Mobile Navigation + Layout */
 @media (max-width: 700px) {
+
     nav {
         flex-direction: column;
         padding: 12px;
@@ -166,37 +243,45 @@ footer {
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 8px;
+        margin-top: 10px;
     }
 
-    #hero {
-        height: auto;
-        padding: 40px 20px;
+    nav a {
+        padding: 8px 14px;
     }
-}
 
-@media (max-width: 500px) {
-    h2 {
-        font-size: 1.5rem;
+    section {
+        padding: 60px 20px;
+        text-align: left;
+    }
+
+    section h2 {
+        font-size: 2rem;
         text-align: center;
     }
 
     .card {
-        padding: 18px;
+        padding: 26px;
+        font-size: 1rem;
     }
 
-    nav .nav-links {
-        flex-direction: column;
-        gap: 8px;
+    .grid {
+        gap: 25px;
     }
+}
 
+/* Smaller phones */
+@media (max-width: 480px) {
     nav a {
-        display: block;
         width: 100%;
         text-align: center;
     }
 
-    section {
-        padding: 50px 0;
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 22px;
     }
 }
